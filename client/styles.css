@@ -1,0 +1,50 @@
+body {
+  /* background-color: rgb(255, 255, 255); */
+  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+  font-size: 81.25%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+}
+
+#logo {
+  background-image: url(chrome://new-tab-page/icons/google_logo.svg);
+  height: 92px;
+  width: 272px;
+}
+
+#input {
+  background-color: #ffffff;
+  padding: 1px 44px 1px 52px;
+  height: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  border: 1px solid #dfe1e5;
+  border-radius: 20px;
+  height: 44px;
+}
+
+#input:hover {
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+}
+
+svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+}
+
+.svg {
+  width: 19px;
+  position: absolute;
+  top: 0;
+  left: 8px;
+}
