@@ -8,3 +8,8 @@
 
 - git clone SSH-key : to local computer
 - git checkout -b development : to create working environment that avoids merging conflicts later on with collaborator
+
+### Local computer
+
+- add client folder
+- add server folder
