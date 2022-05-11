@@ -1,3 +1,4 @@
 # LAP-1-Code-Challenge
 
-- Create a new repo in GitHub
+- create a new repo in GitHub
+- create feedback branch
