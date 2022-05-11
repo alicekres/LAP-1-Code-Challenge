@@ -26,3 +26,4 @@
 - npm i -D jest
 - add test script
 - create tests folder
+- npm i -D supertest
