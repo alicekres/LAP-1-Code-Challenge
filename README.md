@@ -1,3 +1,13 @@
+
+# To Run This Code
+
+- install dependancies
+- in server folder, npm run dev
+- in visual studio in the explorer right click on client index.html and open with live server
+- interact by pressing buttons on index.html in live server
+
+
+
 # LAP-1-Code-Challenge
 
 - create a new repo in GitHub
@@ -27,6 +37,7 @@
 - add test script
 - create tests folder
 - npm i -D supertest
+- npm i cors
 
 .
 .
