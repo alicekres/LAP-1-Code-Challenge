@@ -1,7 +1,8 @@
 body {
-  /* background-color: rgb(255, 255, 255); */
   font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
   font-size: 81.25%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 header {
@@ -10,10 +11,18 @@ header {
   padding: 6px;
 }
 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
 #logo {
   background-image: url(chrome://new-tab-page/icons/google_logo.svg);
   height: 92px;
   width: 272px;
+  margin: 0 auto;
 }
 
 #input {
