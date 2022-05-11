@@ -1,8 +1,6 @@
 body {
   font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
   font-size: 81.25%;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 header {
@@ -14,6 +12,7 @@ header {
 .container {
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -23,6 +22,10 @@ header {
   height: 92px;
   width: 272px;
   margin: 0 auto;
+}
+
+img {
+  width: 100%;
 }
 
 #input {
