@@ -21,3 +21,9 @@
 - create app.js and index.js in server folder
 - follow express instructions for setting express up for testing environment ('Hello World example), except we have index.js file for running the server
 - check if your express server is running by typing: node index.js
+- install nodemon for automatically restarting the node application when there are changes in files: npm i -D nodemon
+- "dev": "nodemon index.js"
+- npm i -D jest
+- add test script
+- create tests folder
+- npm i -D supertest
