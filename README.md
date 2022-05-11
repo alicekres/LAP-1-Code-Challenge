@@ -27,3 +27,29 @@
 - add test script
 - create tests folder
 - npm i -D supertest
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+### Client Folder
+
+- create index.js, index.html, styles.css
+- npm init -y
+- npm i -D express
