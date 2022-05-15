@@ -1,8 +1,7 @@
-
 // work in progress!
 
 // const searchResults = [
-  
+
 //     {
 //     "description":"Signature. Elon Reeve Musk FRS (born June 28, 1971) is an engineer, industrial designer, technology entrepreneur and philanthropist.",
 //     "link":"https://en.wikipedia.org/wiki/Elon_Musk",
@@ -17,7 +16,7 @@
 //     "description":"May 26, 2020 - In 1992, Musk left Canada to study business and physics at the University of Pennsylvania. He graduated with an undergraduate degree in ...",
 //     "link":"https://www.biography.com/business-figure/elon-musk",
 //     "title":"Elon Musk - Education, Tesla & SpaceX - Biography"
-//     },   
+//     },
 //     {
 //     "description":"Jul 13, 2020 - Elon Musk's net worth just hit $70.5 billion, surpassing Warren Buffett's. Here's how the billionaire Tesla and SpaceX CEO went from getting ...",
 //     "link":"https://www.businessinsider.com/the-rise-of-elon-musk-2016-7",
@@ -58,61 +57,58 @@
 //     "link":"https://www.cnbc.com/elon-musk/",
 //     "title":"Elon Musk - CNBC - CNBC.com"
 //     }
-  
+
 //     ]
-  
 
-    
-    
+const clickSearchBtn = document.getElementById('searchBtn');
+const clickRandomBtn = document.getElementById('randomBtn');
+
+clickSearchBtn.addEventListener('click', () => {
+  fetch('http://localhost:3000/results')
+    .then((resp) => resp.json())
+    .then((data) => {
+      console.log(data);
+      const div = document.querySelector('.results-box');
+
+      data.forEach((object) => {
+        console.log(object);
+        const newP = document.createElement('p');
+        const newA = document.createElement('a');
+        const newTitle = document.createElement('h5');
+
+        newP.textContent = object.description;
+        newA.textContent = object.link;
+        newTitle.textContent = object.title;
+
+        div.appendChild(newTitle);
+        div.appendChild(newP);
+
+        newTitle.
 
 
-    const clickSearchBtn = document.getElementById('searchBtn')
-    const clickRandomBtn = document.getElementById('randomBtn')
-
-
-    clickSearchBtn.addEventListener('click', (e) => {
-    fetch("http://localhost:3000/results")
-            .then(resp => resp.json())
-            .then((data) => {
-                const ul = document.querySelector('ul')
-                for (let i = 0; i < data.length; i++) {
-                    newLI = document.createElement('li')
-                    newLI.textContent = data[i].title
-                    ul.append(newLI)
-
-                    newLI = document.createElement('li')
-                    newLI.textContent = data[i].link
-                    ul.append(newLI)
-
-                    newLI = document.createElement('li')
-                    newLI.textContent = data[i].description
-                    ul.append(newLI)
-                }
-
-            })
-            .catch(err => {
-                console.log(err)
-            })
+        // newLiWithAll = newLI.appendChild(newP, newA, newTitle);
+        // const result = ul.appendChild(newLiWithAll);
+        // return result;
+      });
+      //   console.log(result);
     })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
-
-
-
-    clickRandomBtn.addEventListener('click', (e) => {
-        let randNum =(Math.floor((Math.random()*(10))))
-        console.log(randNum)
-        fetch("http://localhost:3000/results")
-        .then(resp => resp.json())
-        .then((data) => {
-            const ul = document.querySelector('ul')
-            newLI = document.createElement('li')
-            newLI.textContent = data[randNum].link
-            ul.append(newLI)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-
-})
-
-
+clickRandomBtn.addEventListener('click', (e) => {
+  let randNum = Math.floor(Math.random() * 10);
+  console.log(randNum);
+  fetch('http://localhost:3000/results')
+    .then((resp) => resp.json())
+    .then((data) => {
+      const ul = document.querySelector('ul');
+      newLI = document.createElement('li');
+      newLI.textContent = data[randNum].link;
+      ul.append(newLI);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
