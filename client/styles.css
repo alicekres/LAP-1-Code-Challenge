@@ -1,0 +1,80 @@
+body {
+  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+  font-size: 81.25%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+}
+
+.container {
+  max-width: 584px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+#logo {
+  background-image: url(chrome://new-tab-page/icons/google_logo.svg);
+  height: 92px;
+  width: 272px;
+  margin: 0 auto 30px;
+}
+
+img {
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+#input {
+  background-color: #ffffff;
+  padding: 1px 44px 1px 52px;
+  outline: none;
+  position: relative;
+  width: 100%;
+  border: 1px solid #dfe1e5;
+  border-radius: 20px;
+  height: 44px;
+}
+
+#input:hover {
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+}
+
+.svg {
+  height: 100%;
+  width: 19px;
+  position: absolute;
+  top: 0;
+  left: 8px;
+  display: block;
+}
+
+.buttons {
+  margin-top: 35px;
+}
+
+button {
+  margin-top: 50px;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+}
